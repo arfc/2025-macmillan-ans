@@ -15,11 +15,13 @@ In this folder, we will outline and write Rhys's abstract for the student confer
 - [ ] Write Abstract.
 
 ## Potential Questions
-1.
+1. What are the economic benefits of reprocessing HALEU vs LEU?
+2. How is proliferation risk changed when reprocessing HALEU vs LEU?
+3. When reprocessing metal vs oxide fuel,what are the different methods that would need to be employed for HALEU?
 
 ### Final Question
 <!-- Think about how you are going to compare results or insert a control -->
-
+What is the proliferation risk of reprocessing HALEU and how does it compare to the risk for LEU?
 ## Cocktail Hour Summary
 <!-- 2 sentences max -->
 
