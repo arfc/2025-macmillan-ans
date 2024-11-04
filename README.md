@@ -24,13 +24,16 @@ In this folder, we will outline and write Rhys's abstract for the student confer
 What is the proliferation risk of reprocessing HALEU and how does it compare to the risk for LEU?
 ## Cocktail Hour Summary
 <!-- 2 sentences max -->
+Reprocessing fuel saves the good stuff from being thrown away, but there is a risk that bad actors will reprocess to make weapons. There are methods of reprocessing that have less of a proliferation risk, and luckily with the new generation of fuel, HALEU, there is even less of a risk.
 
 ### Keywords
 <!-- What 4/5 words are most relevant to your work -->
+Proliferation, HALEU ...
 
 ## Key Metrics
 <!-- SWU, Isotopes, Mass of Fuel fresh/used, Energy Output are common -->
-1.
+1. Isotopes
+2. IAEA significant quantities
 
 
 
