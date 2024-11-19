@@ -28,7 +28,7 @@ Reprocessing fuel saves the good stuff from being thrown away, but there is a ri
 
 ### Keywords
 <!-- What 4/5 words are most relevant to your work -->
-Proliferation, HALEU ...
+Proliferation, HALEU, TRISO, Cyclus ...
 
 ## Key Metrics
 <!-- SWU, Isotopes, Mass of Fuel fresh/used, Energy Output are common -->
