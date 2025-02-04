@@ -1,5 +1,5 @@
-# Rhys's ANS Student Conference Abstract
-In this folder, we will outline and write Rhys's abstract for the student conference.
+# Rhys's ANS Winter Conference Abstract
+In this folder, we will outline and write Rhys's abstract for the winter conference.
 
 ## Steps:
 - [ ] Read papers about your topic and take notes.
