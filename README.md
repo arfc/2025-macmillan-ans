@@ -1,34 +1,22 @@
-# Rhys's ANS Winter Conference Abstract
-In this folder, we will outline and write Rhys's abstract for the winter conference.
+# Rhys's Technical Workshop on Fuel Cycle Simulation Abstract
+In this folder, we will outline and write Rhys's abstract for TWoFCS.
 
 ## Steps:
-- [ ] Read papers about your topic and take notes.
-- [ ] Write the background section based on your notes.
-- [ ] Decide the question based on what is absent from the literature.
-- [ ] Outline the parts of the simulation and what metrics you'll use.
-- [ ] Write the introduction based on the plan.
-- [ ] Detail what information you need for the simulation.
-- [ ] Build/run the simulations.
-- [ ] Analyze the metrics outlined before.
-- [ ] Write Results.
-- [ ] Write Conclusions.
+- [ ] Review Greg's work on pyre and take notes.
+- [ ] Review safeguards literature and take notes
+- [ ] Write the background section based on notes.
+- [ ] Ask Nathan for a summary of Cyclus and archetypes.
 - [ ] Write Abstract.
 
-## Potential Questions
-1. What are the economic benefits of reprocessing HALEU vs LEU?
-2. How is proliferation risk changed when reprocessing HALEU vs LEU?
-3. When reprocessing metal vs oxide fuel,what are the different methods that would need to be employed for HALEU?
-
-### Final Question
+### Final Goal
 <!-- Think about how you are going to compare results or insert a control -->
-What is the proliferation risk of reprocessing HALEU and how does it compare to the risk for LEU?
+Update pyre to work with the current version of cyclus and replicate the results from Greg's thesis.
 ## Cocktail Hour Summary
 <!-- 2 sentences max -->
-Reprocessing fuel saves the good stuff from being thrown away, but there is a risk that bad actors will reprocess to make weapons. There are methods of reprocessing that have less of a proliferation risk, and luckily with the new generation of fuel, HALEU, there is even less of a risk.
-
+Fuel cycle simulations are good tools for determining valuable information about fuel cycles. Proliferation resistance is essential to modern fuel cycles, and it can be accounted for by using pyre in conjunction with pyre.
 ### Keywords
 <!-- What 4/5 words are most relevant to your work -->
-Proliferation, HALEU, TRISO, Cyclus ...
+Proliferation, Cyclus, pyre ...
 
 ## Key Metrics
 <!-- SWU, Isotopes, Mass of Fuel fresh/used, Energy Output are common -->
