@@ -13,10 +13,10 @@ In this folder, we will outline and write Rhys's abstract for TWoFCS.
 Update pyre to work with the current version of cyclus and replicate the results from Greg's thesis.
 ## Cocktail Hour Summary
 <!-- 2 sentences max -->
-Fuel cycle simulations are good tools for determining valuable information about fuel cycles. Proliferation resistance is essential to modern fuel cycles, and it can be accounted for by using pyre in conjunction with pyre.
+Fuel cycle simulations are good tools for determining valuable information about fuel cycles. Proliferation resistance is essential to modern fuel cycles, and it can be accounted for by using PyRe in conjunction with Cyclus.
 ### Keywords
 <!-- What 4/5 words are most relevant to your work -->
-Proliferation, Cyclus, pyre ...
+Proliferation, Cyclus, PyRe ...
 
 ## Key Metrics
 <!-- SWU, Isotopes, Mass of Fuel fresh/used, Energy Output are common -->
