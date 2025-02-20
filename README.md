@@ -6,7 +6,8 @@ In this folder, we will outline and write Rhys's abstract for TWoFCS.
 - [ ] Review safeguards literature and take notes
 - [ ] Write the background section based on notes.
 - [ ] Ask Nathan for a summary of Cyclus and archetypes.
-- [ ] Write Abstract.
+- [ ] Write abstract draft.
+- [ ] Review Katy's edits
 
 ### Final Goal
 <!-- Think about how you are going to compare results or insert a control -->
