@@ -1,0 +1,79 @@
+\documentclass{anstrans}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Updating PyRe for the Current Cyclus Framework}
+\author{Rhys R. MacMillan,$^{*}$ Nathan S. Ryan,$^{*}$ and Kathryn D. Huff$^{*}$}
+
+\institute{
+$^{*}$Advanced Reactors and Fuel Cycles Group, University of Illinois, Urbana IL, rhysrm2@illinois.edu
+}
+
+%%%% packages and definitions (optional)
+\usepackage{graphicx} % allows inclusion of graphics
+\usepackage{booktabs} % nice rules (thick lines) for tables
+\usepackage{microtype} % improves typography for PDF
+\usepackage{xspace}
+\usepackage{float}
+
+\newcommand{\SN}{S$_N$}
+\renewcommand{\vec}[1]{\bm{#1}} %vector is bold italic
+\newcommand{\vd}{\bm{\cdot}} % slightly bold vector dot
+\newcommand{\grad}{\vec{\nabla}} % gradient
+\newcommand{\ud}{\mathop{}\!\mathrm{d}} % upright derivative symbol
+\newcommand{\cycamore}{\textsc{Cycamore}\xspace}
+\newcommand{\cyclus}{\textsc{Cyclus}\xspace}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+The United States has exclusively operated a once-through civilian fuel cycle. 
+Over several decades, the country’s many reactors have generated a stockpile of used fuel. Interest in closing the fuel cycle by reprocessing is increasing so the volume of high level waste that requires storage is reduced, and the valuable fissionable isotopes mixed into that waste won’t be discarded. Reprocessing nuclear fuel does come with some challenges, with proliferation concerns being high on the list for the U.S. government. To deal with these concerns, researchers at Argonne National Laboratory developed pyroprocessing, which is a reprocessing method that uses electrochemical separation and doesn’t produce a plutonium material stream. 
+
+Pyroprocessing has not been demonstrated at an industrial scale yet, which provides an opportunity to implement safeguards into the design of any proposed facility. To safeguard facilities, material tracking is required at all stages to be able to detect any diversions as soon as they happen. Limiting the amount of material diverted is of utmost importance, as the amount of material required to produce an explosive device is relatively small compared to the throughput of an industrial reprocessing facility. The International Atomic Energy Agency (IAEA) determined the significant quantities shown in Table I are defined such that the “possibility of manufacturing a nuclear explosive device cannot be excluded” \cite{schanfein_iaea_2021}.
+
+\begin{table}[H]
+  \centering
+  \caption{Significant Quantities.}
+  \label{tab:deployment_schemes}
+  \begin{tabular}{c c}
+    \hline
+    Nuclear Material&Significant Quantities\\
+    \hline
+    Plutonium (<80\% $^{238}$Pu)&8 kg\\
+    $^{233}$U&8 kg\\
+    HEU ($^{235}$U > 20\%)&25 kg\\
+    LEU&75 kg\\
+    Natural U&10 tonnes\\
+    Depleted U&20 tonnes\\
+    Thorium&20 tonnes\\
+    \hline
+  \end{tabular}
+\end{table}
+
+One way to test new fuel cycles, such as one that incorporates pyroprocessing, is by using a fuel cycle simulator. The simulator that will be used in this work to model a pyroprocessing fuel cycle is called \cyclus.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cyclus}
+\label{sec:cyclus}
+\cyclus \cite{huff_cyclus_intro_2016} is an open-source nuclear fuel cycle simulation framework that tracks transactions of commodities between facilities. In \cyclus, facilities are represented as agents that can be configured to interact with each other through the central marketplace, and the \cyclus ecosystem is full of pre-built \textit{archetypal} facilities which users can import into a model to simulate a variety of fuel cycle scenarios. \cyclus is designed to be flexible and extensible, allowing users to create custom facilities and commodities to model specific scenarios. The framework also includes a variety of tools for analyzing and visualizing simulation results, making it a powerful tool for researchers and policymakers in the nuclear energy field. Many traditional nuclear fuel cycle facilities have archetypes in \cycamore \cite{Carlsen_cycamore_2014}, which is maintained by the \cyclus developers and users.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{PyRe}
+The standard Separations \cycamore archetype has a user defined efficiency and material streams, but provides little insight into the operations in the reprocessing facility. PyRe fills this gap by allowing users to parameterize sub-processes to keep track of material balance, isotopic buildup, power draw, and other observable values that can be used to detect material diversions \cite{westphal_modeling_2019}.
+
+PyRe is a \cyclus archetype developed by Gregory Westphal that tracks material carefully through the \cyclus Separations archetype. PyRe was made to follow the flow of nuclear material through reprocessing facilities, and to work with data that the IAEA collects so that diversion detection can be more accurately modeled. The PRIDE facility in Korea was modeled to demonstrate PyRe’s material diversion detection capabilities. The data gathered using PyRe can be used to help place detectors in optimal locations to more swiftly detect proliferation risks \cite{westphal_pyre_2018}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Purpose}
+
+Recently, the \cyclus framework was updated, and the PyRe archetype is no longer functional. The purpose of this work is to update the archetype so that it can be used in \cyclus simulations once more. To show that the PyRe archetype has been accurately updated, the simulations will be repeated to recreate the results generated in PyRe’s introduction.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Acknowledgments}
+%This material is based upon work supported by a Department of Energy Nuclear
+%Energy University Programs Graduate Fellowship.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{ans}
+\bibliography{bibliography}
+\end{document}
+
