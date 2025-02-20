@@ -1,6 +1,6 @@
 \documentclass{anstrans}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Updating PyRe for the Current Cyclus Framework}
+\title{Updating PyRe for the Cyclus v1.6.0 Framework}
 \author{Rhys R. MacMillan,$^{*}$ Nathan S. Ryan,$^{*}$ and Kathryn D. Huff$^{*}$}
 
 \institute{
@@ -26,14 +26,14 @@ $^{*}$Advanced Reactors and Fuel Cycles Group, University of Illinois, Urbana IL
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 The United States has exclusively operated a once-through civilian fuel cycle. 
-Over several decades, the country’s many reactors have generated a stockpile of used fuel. Interest in closing the fuel cycle by reprocessing is increasing so the volume of high level waste that requires storage is reduced, and the valuable fissionable isotopes mixed into that waste won’t be discarded. Reprocessing nuclear fuel does come with some challenges, with proliferation concerns being high on the list for the U.S. government. To deal with these concerns, researchers at Argonne National Laboratory developed pyroprocessing, which is a reprocessing method that uses electrochemical separation and doesn’t produce a plutonium material stream. 
+Over several decades, the country’s many reactors have generated a stockpile of used fuel. Interest in closing the fuel cycle by reprocessing is increasing so the volume of high-level waste that requires storage is reduced, and the valuable fissionable isotopes mixed into that waste won’t be discarded. To deal with proliferation concerns from reprocessing, researchers at Argonne National Laboratory developed pyroprocessing, which is a reprocessing method that uses electrochemical separation and doesn’t produce a plutonium material stream. 
 
 Pyroprocessing has not been demonstrated at an industrial scale yet, which provides an opportunity to implement safeguards into the design of any proposed facility. To safeguard facilities, material tracking is required at all stages to be able to detect any diversions as soon as they happen. Limiting the amount of material diverted is of utmost importance, as the amount of material required to produce an explosive device is relatively small compared to the throughput of an industrial reprocessing facility. The International Atomic Energy Agency (IAEA) determined the significant quantities shown in Table I are defined such that the “possibility of manufacturing a nuclear explosive device cannot be excluded” \cite{schanfein_iaea_2021}.
 
 \begin{table}[H]
   \centering
   \caption{Significant Quantities.}
-  \label{tab:deployment_schemes}
+  \label{tab:sig_quant}
   \begin{tabular}{c c}
     \hline
     Nuclear Material&Significant Quantities\\
@@ -58,14 +58,14 @@ One way to test new fuel cycles, such as one that incorporates pyroprocessing, i
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{PyRe}
-The standard Separations \cycamore archetype has a user defined efficiency and material streams, but provides little insight into the operations in the reprocessing facility. PyRe fills this gap by allowing users to parameterize sub-processes to keep track of material balance, isotopic buildup, power draw, and other observable values that can be used to detect material diversions \cite{westphal_modeling_2019}.
+The standard Separations \cycamore archetype has a user defined efficiency and material streams, but provides little insight into the operations in the reprocessing facility. PyRe allows users to parameterize sub-processes to keep track of material balance, isotopic buildup, power draw, and other observable values that can be used to detect material diversions \cite{westphal_modeling_2019}.
 
 PyRe is a \cyclus archetype developed by Gregory Westphal that tracks material carefully through the \cyclus Separations archetype. PyRe was made to follow the flow of nuclear material through reprocessing facilities, and to work with data that the IAEA collects so that diversion detection can be more accurately modeled. The PRIDE facility in Korea was modeled to demonstrate PyRe’s material diversion detection capabilities. The data gathered using PyRe can be used to help place detectors in optimal locations to more swiftly detect proliferation risks \cite{westphal_pyre_2018}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Purpose}
 
-Recently, the \cyclus framework was updated, and the PyRe archetype is no longer functional. The purpose of this work is to update the archetype so that it can be used in \cyclus simulations once more. To show that the PyRe archetype has been accurately updated, the simulations will be repeated to recreate the results generated in PyRe’s introduction.
+Recently, the \cyclus framework was updated, and the PyRe archetype is no longer functional. The purpose of this work is to update the archetype so that it can be used in \cyclus simulations for future work. To show that the PyRe archetype has been accurately updated, the simulations will be replicated to evaluate the results generated in PyRe’s introduction and extend the archetype for future work.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\section{Acknowledgments}
