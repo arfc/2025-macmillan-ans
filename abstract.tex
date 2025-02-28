@@ -49,7 +49,7 @@ Pyroprocessing has not been demonstrated at an industrial scale, which provides 
   \end{tabular}
 \end{table}
 
-One way to test new fuel cycles, such as one that incorporates pyroprocessing, is by using a fuel cycle simulator. The simulator that will be used in this work to model a pyroprocessing fuel cycle is called \cyclus.
+One way to evaluate fuel cycles, such as one that incorporates pyroprocessing, is by using a fuel cycle simulator. The simulator that will be used in this work to model a pyroprocessing fuel cycle is called \cyclus.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Cyclus}
@@ -58,9 +58,11 @@ One way to test new fuel cycles, such as one that incorporates pyroprocessing, i
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{PyRe}
+PyRe is a \cyclus archetype developed by Gregory Westphal that tracks material carefully through the \cyclus Separations archetype. PyRe was made to follow the flow of nuclear material through reprocessing facilities, and to work with data that the IAEA collects so that diversion detection can be more accurately modeled. 
+
 The standard \cycamore Separations archetype has a user defined efficiency and material streams, but provides little insight into the operations in the reprocessing facility. PyRe allows users to parameterize sub-processes to track material balance, isotopic buildup, power draw, and other observable values that can be used to detect material diversions \cite{westphal_modeling_2019}.
 
-PyRe is a \cyclus archetype developed by Gregory Westphal that tracks material carefully through the \cyclus Separations archetype. PyRe was made to follow the flow of nuclear material through reprocessing facilities, and to work with data that the IAEA collects so that diversion detection can be more accurately modeled. The PRIDE facility in Korea was modeled to demonstrate the material diversion detection capabilities of PyRe. Detector efficiency at each step is a useful marker of accuracy, and the data gathered with PyRe can be used to help place detectors in optimal locations to more swiftly detect proliferation risks \cite{westphal_pyre_2018}.
+The PRIDE facility in Korea was modeled to demonstrate the material diversion detection capabilities of PyRe. Detector efficiency at each step is a useful marker of accuracy, and the data gathered with PyRe can be used to help place detectors in optimal locations to more swiftly detect proliferation risks \cite{westphal_pyre_2018}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Purpose}
